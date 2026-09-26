@@ -1,102 +1,71 @@
-# 💼 Amit Portfolio
+# 💼 Amit K Pandey — Cloud & DevOps Portfolio
 
-A modern, responsive personal portfolio website built using **HTML, CSS, and JavaScript** to showcase my skills, projects, education, certifications, and contact information.
+[![Live Demo](https://img.shields.io/badge/Demo-Live_Website-blue?style=for-the-badge&logo=googlechrome&logoColor=white)](https://amit5197.github.io/amit-portfolio/)
+[![GitHub stars](https://img.shields.io/github/stars/Amit5197/amit-portfolio?style=for-the-badge)](https://github.com/Amit5197/amit-portfolio/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Amit5197/amit-portfolio?style=for-the-badge)](https://github.com/Amit5197/amit-portfolio/network/members)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-![GitHub Repo stars](https://img.shields.io/github/stars/Amit5197/amit-portfolio?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/Amit5197/amit-portfolio?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/Amit5197/amit-portfolio?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
----
-
-# 🌐 Live Demo
-
-🔗 https://amit5197.github.io/amit-portfolio/
+A clean, modern, and responsive personal portfolio website showcasing my professional background, certifications, technical projects, and expertise across **AWS, Azure, GCP, Kubernetes, and CI/CD automation**.
 
 ---
 
-# 📖 About
+## 🌐 Live Website
 
-This portfolio represents my professional journey and highlights my technical skills, projects, certifications, education, and achievements.
-
-It is designed with a clean UI, responsive layout, and smooth navigation to provide an excellent user experience across all devices.
+🔗 **[amit5197.github.io/amit-portfolio](https://amit5197.github.io/amit-portfolio/)**
 
 ---
 
-# ✨ Features
+## 📖 About
 
-- Responsive Design
-- Modern UI
-- Mobile Friendly
-- Smooth Scrolling
-- Project Showcase
-- Skills Section
-- About Section
-- Contact Section
-- Clean Code Structure
-- Easy Customization
+This site serves as the central hub for my professional journey as a **Lead CloudOps & DevOps Engineer**. It features a modern dark-accented UI, mobile-responsive layout, and automated GitOps deployment via GitHub Actions.
+
+### ✨ Key Features
+- **Responsive Architecture:** Optimized for desktop, tablet, and mobile browsers.
+- **GitOps CI/CD:** Fully automated builds and deployment via GitHub Actions on every commit to `main`.
+- **Dynamic Showcase:** Structured grids for multi-cloud certifications, projects, and tech stacks.
+- **Direct Interaction:** Integrated, clickable communication channels (email, phone, LinkedIn, GitHub).
 
 ---
 
-# 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
-- HTML5
-- CSS3
-- JavaScript (ES6)
-- Git
-- GitHub
-- GitHub Pages
+- **Frontend:** HTML5, CSS3, JavaScript (ES6)
+- **CI/CD & Hosting:** GitHub Actions, GitHub Pages
+- **Version Control:** Git, GitHub
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```
 amit-portfolio/
-│
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml
-│
-├── assets/
-│   ├── css/
-│   ├── js/
-│   ├── images/
-│   └── icons/
-│
-├── index.html
-├── README.md
-├── LICENSE
-└── .gitignore
+│       └── deploy.yml      # Automated GitHub Pages CI/CD workflow
+├── images/
+│   └── profile.png         # Profile and asset images
+├── index.html              # Main website markup
+├── style.css               # Styling and responsive design
+├── script.js               # Dynamic client-side scripts
+├── resume.pdf              # Downloadable resume
+├── README.md               # Documentation
+└── LICENSE                 # MIT License
 ```
 
 ---
 
-# ⚙️ Local Installation
+## ⚙️ Local Development
 
-## Clone Repository
-
-```bash
-git clone https://github.com/Amit5197/amit-portfolio.git
-```
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/Amit5197/amit-portfolio.git](https://github.com/Amit5197/amit-portfolio.git)
+   cd amit-portfolio
 
 ## Navigate into the project
 
 ```bash
 cd amit-portfolio
 ```
-
-## Open in Browser
-
-Simply open
-
-```
-index.html
-```
-
-or use VS Code Live Server.
-
----
 
 # 🚀 Deployment using GitHub Pages
 
@@ -146,8 +115,6 @@ Create the following file:
 .github/workflows/deploy.yml
 ```
 
-Paste:
-
 ```yaml
 name: Deploy Portfolio
 
@@ -170,9 +137,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -180,12 +145,12 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload Website
+      - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
-      - name: Deploy Website
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
 ```
@@ -265,101 +230,33 @@ Display it with:
 
 ---
 
-# 🤝 Contributing
+🤝 Contributing
+Contributions and recommendations are welcome.
 
-Contributions are welcome.
+Fork the repository.
 
-1. Fork the repository
-2. Create a feature branch
+Create your feature branch: git checkout -b feature/new-enhancement
 
-```
-git checkout -b feature-name
-```
+Commit your changes: git commit -m "feat: add new enhancement"
 
-3. Commit changes
+Push to the branch: git push origin feature/new-enhancement
 
-```
-git commit -m "Add new feature"
-```
-
-4. Push
-
-```
-git push origin feature-name
-```
-
-5. Open a Pull Request
+Open a Pull Request.
 
 ---
 
-# 🧪 Testing
+👨‍💻 Author
+Amit K Pandey
 
-Before pushing changes:
+Lead CloudOps & DevOps Engineer
 
-- Verify all links work correctly.
-- Test on Chrome, Firefox, and Edge.
-- Test responsiveness on mobile and desktop.
-- Validate HTML and CSS.
-- Check browser console for JavaScript errors.
+GitHub: @Amit5197
 
----
+LinkedIn: amitpandey5197
 
-# 📄 License
+Email: Bhai.amit7@gmail.com
 
-This project is licensed under the MIT License.
+Phone: +91 7000074442
 
----
-
-# 👨‍💻 Author
-
-**Amit**
-
-GitHub
-
-https://github.com/Amit5197
-
-LinkedIn
-
-(Add your LinkedIn profile)
-
-Email
-
-(Add your email)
-
----
-
-# ⭐ Support
-
-If you found this project helpful:
-
-⭐ Star this repository
-
-🍴 Fork this repository
-
-🛠️ Contribute improvements
-
----
-
-# 📌 Version
-
-Current Version
-
-```
-v1.0.0
-```
-
-Last Updated
-
-```
-2026
-```
-
----
-
-## 📬 Feedback
-
-Suggestions and feedback are always welcome.
-
-Feel free to open an Issue or submit a Pull Request.
-
-Happy Coding! 🚀
+📄 License
+Distributed under the MIT License.
