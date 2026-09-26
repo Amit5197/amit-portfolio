@@ -3,9 +3,10 @@
 [![Live Demo](https://img.shields.io/badge/Demo-Live_Website-blue?style=for-the-badge&logo=googlechrome&logoColor=white)](https://amit5197.github.io/amit-portfolio/)
 [![GitHub stars](https://img.shields.io/github/stars/Amit5197/amit-portfolio?style=for-the-badge)](https://github.com/Amit5197/amit-portfolio/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/Amit5197/amit-portfolio?style=for-the-badge)](https://github.com/Amit5197/amit-portfolio/network/members)
+[![Security Scan](https://img.shields.io/badge/Security-Trivy_Passed-brightgreen?style=for-the-badge&logo=shield)](https://github.com/Amit5197/amit-portfolio/actions)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-A clean, modern, and responsive personal portfolio website showcasing my professional background, certifications, technical projects, and expertise across **AWS, Azure, GCP, Kubernetes, and CI/CD automation**.
+A modern, responsive personal portfolio website showcasing my professional background, enterprise cloud certifications, hands-on projects, and technical skills across **AWS, Azure, GCP, Kubernetes, Terraform, and GitOps CI/CD**.
 
 ---
 
@@ -15,41 +16,46 @@ A clean, modern, and responsive personal portfolio website showcasing my profess
 
 ---
 
-## 📖 About
+## 📖 Overview
 
-This site serves as the central hub for my professional journey as a **Lead CloudOps & DevOps Engineer**. It features a modern dark-accented UI, mobile-responsive layout, and automated GitOps deployment via GitHub Actions.
+Designed and built as the digital resume and project portfolio for **Amit K Pandey** (Lead CloudOps & DevOps Engineer). 
 
 ### ✨ Key Features
-- **Responsive Architecture:** Optimized for desktop, tablet, and mobile browsers.
-- **GitOps CI/CD:** Fully automated builds and deployment via GitHub Actions on every commit to `main`.
-- **Dynamic Showcase:** Structured grids for multi-cloud certifications, projects, and tech stacks.
-- **Direct Interaction:** Integrated, clickable communication channels (email, phone, LinkedIn, GitHub).
+- **Responsive Web UI:** Clean, dark-accented mobile-first interface built with semantic HTML5, CSS3, and modern JavaScript.
+- **GitOps Deployment:** 100% automated static site delivery via GitHub Actions on every merge to `main`.
+- **Shift-Left Security:** Automated secret detection and vulnerability auditing prior to production deployments.
+- **Verified Credentials:** Showcase of multi-cloud certifications across AWS, Microsoft Azure, and Oracle Cloud (OCI).
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML5, CSS3, JavaScript (ES6)
-- **CI/CD & Hosting:** GitHub Actions, GitHub Pages
+- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+- **Hosting:** GitHub Pages
+- **Automation / CI/CD:** GitHub Actions
+- **DevSecOps Tooling:** Aqua Security Trivy, GitGuardian/Secret Linting, Dependabot
 - **Version Control:** Git, GitHub
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 amit-portfolio/
 ├── .github/
 │   └── workflows/
-│       └── deploy.yml      # Automated GitHub Pages CI/CD workflow
+│       ├── deploy.yml          # Continuous Deployment to GitHub Pages
+│       └── security-scan.yml   # DevSecOps pipeline (Trivy & Secret auditing)
 ├── images/
-│   └── profile.png         # Profile and asset images
-├── index.html              # Main website markup
-├── style.css               # Styling and responsive design
-├── script.js               # Dynamic client-side scripts
-├── resume.pdf              # Downloadable resume
-├── README.md               # Documentation
-└── LICENSE                 # MIT License
+│   ├── profile.png             # Author profile image
+│   └── screenshot.png          # Portfolio preview image
+├── index.html                  # Core portfolio landing page
+├── style.css                   # Global styles & responsive layout
+├── script.js                   # Smooth scrolling & DOM interactions
+├── resume.pdf                  # Downloadable curriculum vitae
+├── .gitignore                  # Git tracking exclusion list
+├── README.md                   # Repository documentation
+└── LICENSE                     # MIT Open Source License
 ```
 
 ---
