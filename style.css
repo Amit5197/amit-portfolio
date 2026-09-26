@@ -125,7 +125,7 @@ nav ul li a:hover {
 }
 
 /* ==========================================================================
-   Hero Section
+   Hero Section & Typing Animation
    ========================================================================== */
 .hero {
   padding: 6rem 0 4rem;
@@ -166,12 +166,24 @@ nav ul li a:hover {
   -webkit-text-fill-color: transparent;
 }
 
-.hero h3 {
+.hero-typing-container {
   font-size: 1.4rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  min-height: 2.2rem;
+}
+
+#typewriter {
   color: var(--accent);
   font-weight: 600;
-  margin-bottom: 1.5rem;
-  min-height: 2rem;
+}
+
+.type-cursor {
+  color: var(--accent);
+  font-weight: 300;
+  margin-left: 2px;
+  animation: blink 0.8s infinite;
 }
 
 .hero p {
@@ -478,7 +490,7 @@ nav ul li a:hover {
 }
 
 /* ==========================================================================
-   Contact & Interactive Form Section (Modern Tech Redesign)
+   Contact & Interactive Form Section
    ========================================================================== */
 .contact-wrapper {
   display: grid;
