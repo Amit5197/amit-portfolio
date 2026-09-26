@@ -1,4 +1,6 @@
-.experience-container, .education-container, .skills-category-container {
+/* Container Layouts */
+.experience-container, 
+.education-container {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -6,33 +8,82 @@
   margin: 0 auto;
 }
 
-.experience-card, .education-card, .skill-category-card {
+/* Skills Cards in a 2-Column Responsive Grid */
+.skills-category-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Card Baselines */
+.experience-card, 
+.education-card, 
+.skill-category-card {
   background: #1e293b;
   border: 1px solid #334155;
   border-radius: 8px;
   padding: 1.5rem;
   color: #f8fafc;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
+.skill-category-card h3 {
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.skill-category-card p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Experience Header & List */
 .exp-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   flex-wrap: wrap;
+  gap: 0.5rem;
   margin-bottom: 0.75rem;
 }
 
-.exp-header span {
+.exp-header h3 span {
   color: #38bdf8;
+}
+
+.exp-date {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.project-tag {
+  color: #38bdf8;
+  margin-bottom: 0.75rem;
   font-size: 0.9rem;
 }
 
 .experience-card ul {
   padding-left: 1.25rem;
   line-height: 1.6;
+  color: #cbd5e1;
 }
 
-.project-tag {
-  color: #94a3b8;
+.experience-card li {
   margin-bottom: 0.5rem;
+}
+
+/* Education Details */
+.edu-institution {
+  color: #94a3b8;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.edu-date {
+  color: #38bdf8;
+  font-size: 0.9rem;
 }
