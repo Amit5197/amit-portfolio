@@ -236,7 +236,7 @@ Display it with:
 
 ---
 
-🤝 Contributing
+# 🤝 Contributing
 Contributions and recommendations are welcome.
 
 Fork the repository.
@@ -251,18 +251,18 @@ Open a Pull Request.
 
 ---
 
-👨‍💻 Author
+# 👨‍💻 Author
 Amit K Pandey
 
 Lead CloudOps & DevOps Engineer
 
-GitHub: @Amit5197
+# GitHub: @Amit5197
 
-LinkedIn: amitpandey5197
+# LinkedIn: amitpandey5197
 
-Email: Bhai.amit7@gmail.com
+# Email: Bhai.amit7@gmail.com
 
-Phone: +91 7000074442
+# Phone: +91 7000074442
 
-📄 License
-Distributed under the MIT License.
+# 📄 License
+- Distributed under the MIT License.
