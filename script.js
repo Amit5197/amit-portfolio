@@ -2,52 +2,41 @@
 // 1. Dynamic Typewriter Effect
 // ==========================================
 const roles = [
-  "Cloud & DevOps Engineer",
-  "AWS & Azure Architect",
-  "Kubernetes & Platform Specialist",
-  "DevSecOps & SRE Engineer",
-  "Agentic AI Automation Builder"
+  "Cloud & DevOps Architecture",
+  "AWS & Azure Multi-Cloud",
+  "Kubernetes Platform Engineering",
+  "DevSecOps & CI/CD Pipelines",
+  "Agentic AI Automation Workflows",
+  "Site Reliability Engineering (SRE)"
 ];
 
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
-// Targets the subtitle regardless of whether it is h2 or h3
-const typingElement = document.querySelector(".hero h3") || document.querySelector(".hero h2");
-
-// Ensure cursor element exists
-let cursorSpan = document.querySelector(".typing-cursor");
-if (!cursorSpan && typingElement) {
-  cursorSpan = document.createElement("span");
-  cursorSpan.className = "typing-cursor";
-  cursorSpan.textContent = "|";
-  cursorSpan.style.cssText = "color: #38bdf8; font-weight: 300; margin-left: 3px; animation: blink 0.8s infinite;";
-  typingElement.parentNode.insertBefore(cursorSpan, typingElement.nextSibling);
-}
-
 function typeEffect() {
-  if (!typingElement) return;
+  const typewriterElement = document.getElementById("typewriter");
+  if (!typewriterElement) return;
 
   const currentRole = roles[roleIndex];
 
   if (isDeleting) {
-    typingElement.textContent = currentRole.substring(0, charIndex - 1);
+    typewriterElement.textContent = currentRole.substring(0, charIndex - 1);
     charIndex--;
   } else {
-    typingElement.textContent = currentRole.substring(0, charIndex + 1);
+    typewriterElement.textContent = currentRole.substring(0, charIndex + 1);
     charIndex++;
   }
 
-  let delay = isDeleting ? 45 : 95;
+  let delay = isDeleting ? 40 : 85;
 
   if (!isDeleting && charIndex === currentRole.length) {
-    delay = 1800; // Pause after word completes
+    delay = 1800; // Pause when title finishes typing
     isDeleting = true;
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
     roleIndex = (roleIndex + 1) % roles.length;
-    delay = 350; // Pause before typing next word
+    delay = 350; // Pause before typing the next title
   }
 
   setTimeout(typeEffect, delay);
@@ -66,31 +55,28 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add("section-visible");
-      observer.unobserve(entry.target); // Reveal only once for performance
+      observer.unobserve(entry.target);
     }
   });
 }, observerOptions);
 
 // ==========================================
-// 3. Smooth Navigation & Initialization
+// 3. Document Lifecycle Initialization
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
-  // Start typewriter
-  if (typingElement) {
-    typingElement.textContent = "";
-    typeEffect();
-  }
+  // Start typing
+  typeEffect();
 
-  // Set up scroll reveal on all sections except hero
+  // Initialize scroll reveals on content sections
   const sections = document.querySelectorAll("section:not(.hero)");
   sections.forEach(section => {
     section.classList.add("section-hidden");
     revealObserver.observe(section);
   });
 
-  // Smooth scroll for nav anchor links
+  // Smooth scroll behavior for internal links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
+    anchor.addEventListener("click", function (e) {
       const targetId = this.getAttribute("href");
       if (targetId === "#") return;
       const targetElement = document.querySelector(targetId);
