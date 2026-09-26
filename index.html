@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amit K Pandey | Cloud & DevOps Engineer</title>
+  
+  <!-- Inter Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- External Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,235 +33,253 @@
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <div class="hero-text">
+    <div class="container hero-content">
+      <span class="hero-badge">CloudOps & DevSecOps Specialist</span>
       <h1>Hi, I'm <span>Amit K Pandey</span></h1>
-      <h2>Cloud & DevOps Engineer</h2>
+      <h3>Cloud & DevOps Engineer</h3>
       <p>
         Designing, deploying, and managing scalable, high-availability infrastructure across AWS & Azure. Experienced in GitOps CI/CD, Kubernetes, IaC, and Agentic AI automation for DevSecOps.
       </p>
-      <a href="resume.pdf" class="btn" download>Download Resume</a>
+      <a href="resume.pdf" class="btn" download>📄 Download Resume</a>
     </div>
   </section>
 
   <!-- ABOUT SECTION -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <div class="about-container">
-      <img src="images/profile.png" alt="Amit K Pandey">
-      <div class="about-text">
-        <p>
-          I am a <strong>Cloud & DevOps Engineer</strong> with 4+ years of hands-on experience designing, deploying, and maintaining scalable, high-availability infrastructure on AWS and Azure. Skilled in CI/CD automation (GitHub Actions, Jenkins, ArgoCD), Infrastructure as Code (Terraform, CloudFormation), containerization and orchestration (Docker, Kubernetes, Helm), and API Gateway-based service integration.
-        </p>
-        <p>
-          Experienced in full-stack observability (Prometheus, Grafana, Loki, CloudWatch, ELK), IAM/RBAC security, and integrating AI agents and LLM-assisted workflows into DevSecOps pipelines to cut manual toil and MTTR. Proven track record of reducing deployment durations by up to 60%, speeding provisioning by 20–30%, and sustaining 99.99% uptime on mission-critical national e-governance infrastructure.
-        </p>
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-card">
+        <div class="about-image-wrapper">
+          <img src="images/profile.png" alt="Amit K Pandey">
+        </div>
+        <div class="about-text">
+          <p>
+            I am a <strong>Cloud & DevOps Engineer</strong> with 4+ years of hands-on experience designing, deploying, and managing scalable, high-availability infrastructure on AWS and Azure. Skilled in CI/CD automation (GitHub Actions, Jenkins, ArgoCD), Infrastructure as Code (Terraform, CloudFormation), containerization and orchestration (Docker, Kubernetes, Helm), and API Gateway-based service integration.
+          </p>
+          <p>
+            Hands-on with full-stack observability using Prometheus, Grafana, Loki, AWS CloudWatch, and the ELK stack, alongside enterprise identity/access security (IAM, OAuth2, RBAC). Experienced in integrating AI agents and LLM-assisted automation into DevSecOps pipelines to cut manual toil and MTTR.
+          </p>
+          <p>
+            Proven record of reducing deployment time by up to <strong>60%</strong>, cutting infrastructure provisioning time by <strong>20–30%</strong>, and sustaining <strong>99.99% uptime</strong> with ~0.1% downtime across national e-governance production infrastructure.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- SKILLS SECTION -->
-  <section id="skills" class="skills">
-    <h2>Core Technical Skills</h2>
-    <div class="skills-category-container">
-      
-      <div class="skill-category-card">
-        <h3>☁️ Cloud & Infrastructure</h3>
-        <p>AWS (EC2, S3, VPC, IAM, RDS, CloudWatch, Route 53, ALB/NLB, API Gateway), Azure (App Services, AKS, Key Vault, Azure Monitor), OCI, Meghraj / E-Gov Infra, Virtualization (KVM, VMware, XenServer)</p>
+  <section id="skills">
+    <div class="container">
+      <h2>Core Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category-card">
+          <h3>☁️ Cloud & Infrastructure</h3>
+          <p>AWS (EC2, S3, VPC, IAM, RDS, CloudWatch, Route 53, ALB/NLB, API Gateway), Azure (App Services, AKS, Key Vault, Azure Monitor), OCI, Meghraj / E-Gov Infra, Virtualization (KVM, VMware, XenServer)</p>
+        </div>
+        <div class="skill-category-card">
+          <h3>☸️ Containers & GitOps</h3>
+          <p>Docker, Kubernetes, Helm, ArgoCD (GitOps)</p>
+        </div>
+        <div class="skill-category-card">
+          <h3>🚀 CI/CD & DevSecOps</h3>
+          <p>GitHub Actions, Jenkins, GitLab CI, Git, Trivy (Security Scanning), SDLC Architecture</p>
+        </div>
+        <div class="skill-category-card">
+          <h3>⚙️ Infrastructure as Code</h3>
+          <p>Terraform, AWS CloudFormation</p>
+        </div>
+        <div class="skill-category-card">
+          <h3>📊 Observability & Monitoring</h3>
+          <p>Prometheus, Grafana, Loki, ELK Stack (Elasticsearch, Logstash, Kibana), AWS CloudWatch, Azure Monitor, Log Analytics, NNMi, Zabbix, Drishti, OBM, SMAX</p>
+        </div>
+        <div class="skill-category-card">
+          <h3>🔒 Security & Identity</h3>
+          <p>IAM, OAuth2, RBAC, Security Groups, Firewalls, VPN, Key Vault, Access Management</p>
+        </div>
+        <div class="skill-category-card">
+          <h3>🤖 AI & Automation</h3>
+          <p>Agentic AI for DevOps, AI/LLM-integrated CI/CD pipelines, Bash/CRON automation, Basic Python, YAML</p>
+        </div>
+        <div class="skill-category-card">
+          <h3>🌐 Networking & Operations</h3>
+          <p>TCP/IP, DNS, HTTP/HTTPS, Load Balancers, API Gateway, VPN, ITSM, SLA Tracking, Incident RCA, Agile/Scrum</p>
+        </div>
       </div>
-
-      <div class="skill-category-card">
-        <h3>☸️ Containers & GitOps</h3>
-        <p>Docker, Kubernetes, Helm, ArgoCD (GitOps)</p>
-      </div>
-
-      <div class="skill-category-card">
-        <h3>🚀 CI/CD & DevSecOps</h3>
-        <p>GitHub Actions, Jenkins, GitLab CI, Git, Trivy Security Scanning, SDLC Architecture</p>
-      </div>
-
-      <div class="skill-category-card">
-        <h3>⚙️ Infrastructure as Code</h3>
-        <p>Terraform, AWS CloudFormation</p>
-      </div>
-
-      <div class="skill-category-card">
-        <h3>📊 Observability & Monitoring</h3>
-        <p>Prometheus, Grafana, Loki, ELK Stack (Elasticsearch, Logstash, Kibana), AWS CloudWatch, Azure Monitor, Log Analytics, Zabbix, NNMi, Drishti, OBM, SMAX</p>
-      </div>
-
-      <div class="skill-category-card">
-        <h3>🔒 Security & Identity</h3>
-        <p>IAM, OAuth2, RBAC, Security Groups, Firewalls, VPN, Azure Key Vault, Access Management</p>
-      </div>
-
-      <div class="skill-category-card">
-        <h3>🤖 AI & Automation</h3>
-        <p>Agentic AI for DevOps, AI/LLM-Integrated Pipelines, Bash/CRON Scripting, Python (Basic), YAML</p>
-      </div>
-
-      <div class="skill-category-card">
-        <h3>🌐 Networking & Operations</h3>
-        <p>TCP/IP, DNS, HTTP/HTTPS, Load Balancing, ITSM, SLA Tracking, Incident RCA, Agile/Scrum</p>
-      </div>
-
     </div>
   </section>
 
   <!-- EXPERIENCE SECTION -->
-  <section id="experience" class="experience">
-    <h2>Professional Experience</h2>
-    <div class="experience-container">
-
-      <div class="experience-card">
-        <div class="exp-header">
-          <h3>Cloud & DevOps Engineer — <span>Coforge Limited</span></h3>
-          <span class="exp-date">Nov 2025 – Present | Delhi, India</span>
+  <section id="experience">
+    <div class="container">
+      <h2>Professional Experience</h2>
+      <div class="experience-list">
+        
+        <div class="experience-card">
+          <div class="exp-header">
+            <h3>Cloud & DevOps Engineer — <span>Coforge Limited</span></h3>
+            <span class="exp-date">Nov 2025 – Present | Delhi, India</span>
+          </div>
+          <ul>
+            <li>Designed and maintained scalable AWS and Azure infrastructure for high-availability production systems, including EC2, IAM, S3, Route 53, VPCs, Subnets, Security Groups, ALB/NLB, and API Gateway.</li>
+            <li>Built and managed multi-stage DevSecOps CI/CD pipelines in GitHub Actions (lint &rarr; scan &rarr; build &rarr; deploy) with Trivy security scanning, cutting deployment time from 40–50 minutes to 15–20 minutes.</li>
+            <li>Delivered 24x7 cloud monitoring and support for e-governance infrastructure, fully automating the build-test-deploy workflow to eliminate manual intervention.</li>
+            <li>Performed root cause analysis (RCA) on production incidents and automated recurring tasks with Bash scripting and CRON jobs to reduce manual effort.</li>
+            <li>Implemented observability with Prometheus, Grafana, and AWS CloudWatch for metrics, logs, dashboards, and alerting, improving production visibility and incident response.</li>
+            <li>Led incident response for production issues, sustaining 99.99% uptime and ~0.1% downtime while maintaining SLA compliance.</li>
+          </ul>
         </div>
-        <ul>
-          <li>Designed and maintained scalable AWS and Azure infrastructure for high-availability production environments (EC2, IAM, S3, Route 53, VPCs, Subnets, Security Groups, ALB/NLB, and API Gateway).</li>
-          <li>Engineered multi-stage DevSecOps CI/CD pipelines in GitHub Actions (lint &rarr; scan &rarr; build &rarr; deploy) with integrated Trivy vulnerability scanning, slashing deployment windows from 40–50 minutes down to 15–20 minutes.</li>
-          <li>Delivered 24x7 monitoring and reliability engineering for national e-governance infrastructure, fully automating build-test-deploy cycles to eliminate manual interventions.</li>
-          <li>Conducted Root Cause Analysis (RCA) on production incidents and automated routine operational tasks using Bash scripts and CRON scheduling.</li>
-          <li>Architected unified observability using Prometheus, Grafana, and AWS CloudWatch for real-time telemetry, dashboards, and automated incident triage.</li>
-          <li>Led production incident response, consistently sustaining 99.99% uptime with ~0.1% downtime under strict SLA compliance.</li>
-        </ul>
-      </div>
 
-      <div class="experience-card">
-        <div class="exp-header">
-          <h3>Cloud Engineer — <span>CMS Computers India Private Limited</span></h3>
-          <span class="exp-date">Sep 2024 – Oct 2025 | Delhi, India</span>
+        <div class="experience-card">
+          <div class="exp-header">
+            <h3>Cloud Engineer — <span>CMS Computers India Private Limited</span></h3>
+            <span class="exp-date">Sep 2024 – Oct 2025 | Delhi, India</span>
+          </div>
+          <span class="project-tag">Project: IVFRT — National Informatics Centre (On-Site)</span>
+          <ul>
+            <li>Designed and monitored IT infrastructure, applications, and security controls, maintaining 99% uptime SLA.</li>
+            <li>Automated CI/CD pipelines with GitHub Actions and Jenkins, cutting manual deployment effort by 30–40%, and implemented centralized logging with ELK, reducing MTTR by 20–30%.</li>
+            <li>Optimized infrastructure for 10–15% cost savings; configured Azure DevOps monitoring and alerting for automated ticket generation.</li>
+            <li>Collaborated with L2/L3 development and support teams to diagnose and resolve production issues, ensuring continuous availability.</li>
+            <li>Managed IAM roles, security groups, and identity access controls to enforce secure access management and compliance.</li>
+          </ul>
         </div>
-        <p class="project-tag"><strong>Project:</strong> IVFRT — National Informatics Centre (NIC On-Site)</p>
-        <ul>
-          <li>Architected and monitored secure core IT infrastructure, cloud deployments, and compliance controls, maintaining 99% uptime SLAs.</li>
-          <li>Automated CI/CD pipelines using GitHub Actions and Jenkins, cutting manual deployment overhead by 30–40%.</li>
-          <li>Built centralized log analysis pipelines using the ELK Stack, reducing Mean Time to Resolution (MTTR) by 20–30%.</li>
-          <li>Optimized cloud compute and storage allocation to achieve 10–15% infrastructure cost reduction.</li>
-          <li>Configured Azure DevOps monitoring alerts coupled with automated service ticketing; partnered with L2/L3 engineering teams for seamless troubleshooting.</li>
-          <li>Governed fine-grained IAM roles, security groups, and access controls to maintain compliance.</li>
-        </ul>
-      </div>
 
-      <div class="experience-card">
-        <div class="exp-header">
-          <h3>Cloud Support Engineer — <span>Ishan Netsol Private Limited</span></h3>
-          <span class="exp-date">Dec 2023 – Sep 2024 | Noida, UP</span>
+        <div class="experience-card">
+          <div class="exp-header">
+            <h3>Cloud Support Engineer — <span>Ishan Netsol Private Limited</span></h3>
+            <span class="exp-date">Dec 2023 – Sep 2024 | Noida, Uttar Pradesh</span>
+          </div>
+          <ul>
+            <li>Supported IaaS services with 24x7 coverage, ensuring high availability and optimal performance across AWS and Azure platforms.</li>
+            <li>Monitored servers, applications, and services, resolving incidents using enterprise ITSM systems.</li>
+            <li>Troubleshot Azure VMs, IAM, networking, storage, and RBAC issues.</li>
+            <li>Set up and managed Active Directory, DNS, DHCP, email, FTP, and web servers.</li>
+            <li>Collaborated with L2/L3 support teams to resolve production incidents and maintain system uptime.</li>
+          </ul>
         </div>
-        <ul>
-          <li>Delivered 24x7 enterprise IaaS operations across AWS and Microsoft Azure platforms, ensuring continuous service reliability.</li>
-          <li>Managed day-to-day cloud operations, diagnosing Azure VM issues, IAM policies, virtual networking, and RBAC permissions.</li>
-          <li>Configured and maintained Active Directory domain controllers, DNS, DHCP, email gateways, FTP, and production web servers.</li>
-          <li>Handled incident triage, root cause diagnosis, and escalations using enterprise ITSM platforms.</li>
-        </ul>
-      </div>
 
-      <div class="experience-card">
-        <div class="exp-header">
-          <h3>System Engineer — <span>Vastek Systems Private Limited</span></h3>
-          <span class="exp-date">Oct 2022 – Nov 2023 | Rewa, MP</span>
+        <div class="experience-card">
+          <div class="exp-header">
+            <h3>System Engineer — <span>Vastek Systems Private Limited</span></h3>
+            <span class="exp-date">Oct 2022 – Nov 2023 | Rewa, Madhya Pradesh</span>
+          </div>
+          <ul>
+            <li>Administered Active Directory, installed operating systems, and configured servers and applications for optimal performance.</li>
+            <li>Designed, deployed, and maintained IT infrastructure (servers, cloud, networking) and managed user access (AD, mailbox, IAM roles/policies).</li>
+            <li>Monitored systems for high availability and provided L1 support for hardware, software, and network issues.</li>
+            <li>Installed, configured, and upgraded operating systems and applications; troubleshot outages and mail configuration issues.</li>
+          </ul>
         </div>
-        <ul>
-          <li>Administered enterprise Active Directory, installed server operating systems, and managed user provisioning (mailboxes, IAM policies, AD groups).</li>
-          <li>Monitored multi-tiered systems for high availability, providing prompt L1/L2 support across hardware, network, and application layers.</li>
-          <li>Managed server upgrades, scheduled patch cycles, and resolved network/mail outages.</li>
-        </ul>
-      </div>
 
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS SECTION -->
-  <section id="projects" class="projects">
-    <h2>Featured Projects</h2>
-    <div class="project-container">
-
-      <div class="project-card">
-        <h3>Enterprise Multi-AZ 3-Tier Architecture</h3>
-        <p>Architected highly resilient AWS infrastructure with public/private subnet topology, ALB ingress, auto-scaling EC2 web/app clusters, and Multi-AZ RDS replication.</p>
-        <span>AWS | Terraform | VPC | ALB | RDS</span>
+  <section id="projects">
+    <div class="container">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div>
+            <h3>AWS 3-Tier Enterprise Architecture</h3>
+            <p>Designed highly available, fault-tolerant infrastructure using EC2, VPC, Application Load Balancers, and multi-AZ RDS with automated Terraform modules.</p>
+          </div>
+          <div class="tech-pill">AWS • EC2 • VPC • RDS • Terraform</div>
+        </div>
+        <div class="project-card">
+          <div>
+            <h3>Kubernetes & GitOps Observability</h3>
+            <p>Configured end-to-end telemetry across Kubernetes clusters using Prometheus, Grafana, and Loki with automated continuous delivery synced via ArgoCD.</p>
+          </div>
+          <div class="tech-pill">Kubernetes • ArgoCD • Prometheus • Grafana</div>
+        </div>
+        <div class="project-card">
+          <div>
+            <h3>DevSecOps CI/CD Automation</h3>
+            <p>Automated multi-stage pipelines featuring Trivy vulnerability security scanning, Docker image builds, and automated zero-downtime deployment workflows.</p>
+          </div>
+          <div class="tech-pill">GitHub Actions • Docker • Trivy • DevSecOps</div>
+        </div>
       </div>
-
-      <div class="project-card">
-        <h3>Production Kubernetes & GitOps Monitoring</h3>
-        <p>Configured end-to-end observability on Kubernetes clusters utilizing Prometheus, Grafana, and Loki with custom alerts and automated GitOps sync via ArgoCD.</p>
-        <span>Kubernetes | ArgoCD | Prometheus | Grafana | Loki</span>
-      </div>
-
-      <div class="project-card">
-        <h3>Automated DevSecOps Pipeline</h3>
-        <p>Built a secure CI/CD pipeline using GitHub Actions featuring Trivy container security audits, automated Docker image build/push, and deployment orchestration.</p>
-        <span>GitHub Actions | Docker | Trivy | DevSecOps</span>
-      </div>
-
     </div>
   </section>
 
   <!-- CERTIFICATIONS SECTION -->
-  <section id="certifications" class="certifications">
-    <h2>Certifications & Accreditations</h2>
-    <div class="cert-grid">
-      <div class="cert-card">☁️ AWS Certified Solutions Architect – Associate (SAA-C03)</div>
-      <div class="cert-card">☁️ AWS Certified Cloud Practitioner (CLF-C02)</div>
-      <div class="cert-card">🔷 Microsoft Certified: Azure Solutions Architect Expert (AZ-305)</div>
-      <div class="cert-card">🔷 Microsoft Certified: Azure Administrator (AZ-104)</div>
-      <div class="cert-card">🔷 Microsoft Certified: Azure Fundamentals (AZ-900)</div>
-      <div class="cert-card">🔴 OCI 2025 Certified DevOps Professional</div>
-      <div class="cert-card">🔴 OCI 2025 Multicloud Architect Professional</div>
-      <div class="cert-card">🤖 AWS Zero to Hero | Agentic AI for DevOps | Azure DevOps — TrainWithShubham</div>
+  <section id="certifications">
+    <div class="container">
+      <h2>Certifications & Specializations</h2>
+      <div class="cert-grid">
+        <div class="cert-card">☁️ AWS Certified Solutions Architect – Associate (SAA-C03)</div>
+        <div class="cert-card">☁️ AWS Certified Cloud Practitioner (CLF-C02)</div>
+        <div class="cert-card">🔷 Microsoft Certified: Azure Solutions Architect Expert (AZ-305)</div>
+        <div class="cert-card">🔷 Microsoft Certified: Azure Administrator (AZ-104)</div>
+        <div class="cert-card">🔷 Microsoft Certified: Azure Fundamentals (AZ-900)</div>
+        <div class="cert-card">🔴 OCI 2025 Certified DevOps Professional</div>
+        <div class="cert-card">🔴 OCI 2025 Multicloud Architect Professional</div>
+        <div class="cert-card">🤖 AWS Zero to Hero | Agentic AI for DevOps — TrainWithShubham</div>
+      </div>
     </div>
   </section>
 
   <!-- EDUCATION SECTION -->
-  <section id="education" class="education">
-    <h2>Education</h2>
-    <div class="education-container">
-
-      <div class="education-card">
-        <h3>Master of Technology (M.Tech) in Computer Science & Engineering</h3>
-        <p class="edu-institution">Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal, MP</p>
-        <span class="edu-date">2021 – 2023 | Grade: <strong>82% (Honors)</strong></span>
+  <section id="education">
+    <div class="container">
+      <h2>Education</h2>
+      <div class="education-list">
+        <div class="education-card">
+          <div class="edu-info">
+            <h3>Master of Technology (M.Tech) in Computer Science & Engineering</h3>
+            <p class="edu-institution">Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV), Bhopal, MP (2021 – 2023)</p>
+          </div>
+          <span class="edu-badge">Grade: 82% (Honors)</span>
+        </div>
+        <div class="education-card">
+          <div class="edu-info">
+            <h3>Bachelor of Technology (B.Tech) in Computer Science & Engineering</h3>
+            <p class="edu-institution">Andhra Technical University (2015 – 2019)</p>
+          </div>
+          <span class="edu-badge">Grade: 70%</span>
+        </div>
       </div>
-
-      <div class="education-card">
-        <h3>Bachelor of Technology (B.Tech) in Computer Science & Engineering</h3>
-        <p class="edu-institution">Andhra Technical University</p>
-        <span class="edu-date">2015 – 2019 | Grade: <strong>70%</strong></span>
-      </div>
-
     </div>
   </section>
 
   <!-- CONTACT SECTION -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-grid">
-      <div class="contact-card">
-        📧
-        <h3>Email</h3>
-        <p><a href="mailto:Bhai.amit7@gmail.com">Bhai.amit7@gmail.com</a></p>
-      </div>
-
-      <div class="contact-card">
-        📱
-        <h3>Mobile</h3>
-        <p><a href="tel:+917000074442">+91 7000074442</a></p>
-      </div>
-
-      <div class="contact-card">
-        💼
-        <h3>LinkedIn</h3>
-        <p><a href="https://linkedin.com/in/amitpandey5197" target="_blank" rel="noopener noreferrer">linkedin.com/in/amitpandey5197</a></p>
-      </div>
-
-      <div class="contact-card">
-        💻
-        <h3>GitHub</h3>
-        <p><a href="https://github.com/Amit5197" target="_blank" rel="noopener noreferrer">github.com/Amit5197</a></p>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="contact-grid">
+        <a href="mailto:Bhai.amit7@gmail.com" class="contact-card">
+          <span class="contact-icon">📧</span>
+          <h3>Email</h3>
+          <p>Bhai.amit7@gmail.com</p>
+        </a>
+        <a href="tel:+917000074442" class="contact-card">
+          <span class="contact-icon">📱</span>
+          <h3>Phone</h3>
+          <p>+91 7000074442</p>
+        </a>
+        <a href="https://linkedin.com/in/amitpandey5197" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <span class="contact-icon">💼</span>
+          <h3>LinkedIn</h3>
+          <p>amitpandey5197</p>
+        </a>
+        <a href="https://github.com/Amit5197" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <span class="contact-icon">💻</span>
+          <h3>GitHub</h3>
+          <p>Amit5197</p>
+        </a>
       </div>
     </div>
   </section>
 
-  <script src="script.js"></script>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Amit K Pandey. All rights reserved. Built with modern HTML5 & CSS3.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
