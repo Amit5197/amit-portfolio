@@ -168,9 +168,10 @@ nav ul li a:hover {
 
 .hero h3 {
   font-size: 1.4rem;
-  color: var(--text-muted);
-  font-weight: 500;
+  color: var(--accent);
+  font-weight: 600;
   margin-bottom: 1.5rem;
+  min-height: 2rem;
 }
 
 .hero p {
@@ -477,13 +478,13 @@ nav ul li a:hover {
 }
 
 /* ==========================================================================
-   Contact & Interactive Form Section
+   Contact & Interactive Form Section (Modern Tech Redesign)
    ========================================================================== */
 .contact-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
+  grid-template-columns: 1fr 1.35fr;
   gap: 2.5rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .contact-direct {
@@ -492,14 +493,32 @@ nav ul li a:hover {
   gap: 1rem;
 }
 
+.direct-header {
+  margin-bottom: 0.5rem;
+}
+
+.direct-header h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.35rem;
+}
+
+.direct-header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 .direct-item {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.25rem;
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.1rem;
   text-decoration: none;
   color: inherit;
   transition: var(--transition);
@@ -507,32 +526,57 @@ nav ul li a:hover {
 
 .direct-item:hover {
   border-color: var(--accent);
-  transform: translateX(4px);
-  background: var(--bg-card);
+  background: rgba(30, 41, 59, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.direct-icon {
-  font-size: 1.8rem;
+.icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  flex-shrink: 0;
 }
 
-.direct-item h4 {
-  font-size: 0.85rem;
-  color: var(--text-muted);
+.direct-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.15rem;
 }
 
 .direct-item p {
-  color: var(--accent);
-  font-weight: 600;
+  color: #f1f5f9;
   font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.direct-item:hover p {
+  color: var(--accent);
 }
 
 .contact-form-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border);
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
-  padding: 2.5rem;
+  padding: 2.25rem;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
 }
 
 .form-group {
@@ -541,41 +585,84 @@ nav ul li a:hover {
 
 .form-group label {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: var(--text-muted);
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  color: #94a3b8;
+  margin-bottom: 0.45rem;
+  letter-spacing: 0.02em;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 0.85rem 1rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(10, 15, 29, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  color: #fff;
+  color: #f8fafc;
   font-size: 0.95rem;
   outline: none;
   transition: var(--transition);
 }
 
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #475569;
+}
+
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 10px var(--accent-glow);
+  background: rgba(10, 15, 29, 1);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
 }
 
 .form-group textarea {
   resize: vertical;
+  min-height: 110px;
 }
 
 .btn-submit {
   width: 100%;
-  padding: 1rem;
-  font-size: 1rem;
+  padding: 0.95rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--accent);
+  color: #031124;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-submit:hover {
+  background: #7dd3fc;
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.35);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Animations & Reveals
+   ========================================================================== */
+.section-hidden {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 /* ==========================================================================
@@ -594,6 +681,9 @@ footer {
    ========================================================================== */
 @media (max-width: 850px) {
   .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
     grid-template-columns: 1fr;
   }
 }
