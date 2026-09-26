@@ -1,151 +1,105 @@
-// =============================
-// Typing Animation
-// =============================
-
-
-const text = [
-    "Cloud & DevOps Engineer",
-    "AWS Cloud Specialist",
-    "Kubernetes Enthusiast",
-    "Automation Engineer"
+// ==========================================
+// 1. Dynamic Typewriter Effect
+// ==========================================
+const roles = [
+  "Cloud & DevOps Engineer",
+  "AWS & Azure Architect",
+  "Kubernetes & Platform Specialist",
+  "DevSecOps & SRE Engineer",
+  "Agentic AI Automation Builder"
 ];
 
-
-let index = 0;
+let roleIndex = 0;
 let charIndex = 0;
+let isDeleting = false;
 
-const typingElement = document.querySelector(".hero h2");
+// Targets the subtitle regardless of whether it is h2 or h3
+const typingElement = document.querySelector(".hero h3") || document.querySelector(".hero h2");
 
-
-function typeEffect(){
-
-    if(charIndex < text[index].length){
-
-        typingElement.textContent += text[index].charAt(charIndex);
-
-        charIndex++;
-
-        setTimeout(typeEffect,100);
-
-    }
-
-    else{
-
-        setTimeout(deleteEffect,1500);
-
-    }
-
+// Ensure cursor element exists
+let cursorSpan = document.querySelector(".typing-cursor");
+if (!cursorSpan && typingElement) {
+  cursorSpan = document.createElement("span");
+  cursorSpan.className = "typing-cursor";
+  cursorSpan.textContent = "|";
+  cursorSpan.style.cssText = "color: #38bdf8; font-weight: 300; margin-left: 3px; animation: blink 0.8s infinite;";
+  typingElement.parentNode.insertBefore(cursorSpan, typingElement.nextSibling);
 }
 
+function typeEffect() {
+  if (!typingElement) return;
 
+  const currentRole = roles[roleIndex];
 
-function deleteEffect(){
+  if (isDeleting) {
+    typingElement.textContent = currentRole.substring(0, charIndex - 1);
+    charIndex--;
+  } else {
+    typingElement.textContent = currentRole.substring(0, charIndex + 1);
+    charIndex++;
+  }
 
-    if(charIndex > 0){
+  let delay = isDeleting ? 45 : 95;
 
-        typingElement.textContent =
-        text[index].substring(0,charIndex-1);
+  if (!isDeleting && charIndex === currentRole.length) {
+    delay = 1800; // Pause after word completes
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    roleIndex = (roleIndex + 1) % roles.length;
+    delay = 350; // Pause before typing next word
+  }
 
-        charIndex--;
-
-        setTimeout(deleteEffect,50);
-
-    }
-
-    else{
-
-        index++;
-
-        if(index >= text.length){
-
-            index = 0;
-
-        }
-
-        setTimeout(typeEffect,500);
-
-    }
-
+  setTimeout(typeEffect, delay);
 }
 
+// ==========================================
+// 2. High-Performance Scroll Reveal (IntersectionObserver)
+// ==========================================
+const observerOptions = {
+  root: null,
+  threshold: 0.12,
+  rootMargin: "0px 0px -40px 0px"
+};
 
-typeEffect();
+const revealObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("section-visible");
+      observer.unobserve(entry.target); // Reveal only once for performance
+    }
+  });
+}, observerOptions);
 
+// ==========================================
+// 3. Smooth Navigation & Initialization
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+  // Start typewriter
+  if (typingElement) {
+    typingElement.textContent = "";
+    typeEffect();
+  }
 
+  // Set up scroll reveal on all sections except hero
+  const sections = document.querySelectorAll("section:not(.hero)");
+  sections.forEach(section => {
+    section.classList.add("section-hidden");
+    revealObserver.observe(section);
+  });
 
-
-
-// =============================
-// Scroll Reveal Animation
-// =============================
-
-
-const sections =
-document.querySelectorAll("section");
-
-
-window.addEventListener("scroll",()=>{
-
-
-sections.forEach(section=>{
-
-
-const position =
-section.getBoundingClientRect().top;
-
-
-const screenHeight =
-window.innerHeight;
-
-
-if(position < screenHeight - 100){
-
-
-section.style.opacity="1";
-
-section.style.transform="translateY(0)";
-
-
-}
-
-
-});
-
-
-});
-
-
-
-
-
-// =============================
-// Initial Animation Setup
-// =============================
-
-
-sections.forEach(section=>{
-
-
-section.style.opacity="0";
-
-section.style.transform="translateY(50px)";
-
-section.style.transition=
-"all .8s ease";
-
-
-});
-
-
-
-// Show first section after load
-
-window.addEventListener("load",()=>{
-
-
-document.querySelector(".hero").style.opacity="1";
-
-document.querySelector(".hero").style.transform="translateY(0)";
-
-
+  // Smooth scroll for nav anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      const targetId = this.getAttribute("href");
+      if (targetId === "#") return;
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    });
+  });
 });
